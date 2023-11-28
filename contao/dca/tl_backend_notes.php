@@ -16,6 +16,9 @@ use Contao\Backend;
 use Contao\CoreBundle\Security\ContaoCorePermissions;
 use Contao\DataContainer;
 use Contao\DC_Table;
+use Contao\Image;
+use Contao\StringUtil;
+use Contao\System;
 
 /**
  * Table tl_backend_notes
@@ -33,9 +36,10 @@ $GLOBALS['TL_DCA']['tl_backend_notes'] = array(
 	'list' => array(
 		'sorting' => array(
 			'mode' => DataContainer::MODE_TREE,
+			'rootPaste' => true,
 			'fields' => array('sorting'),
 			'flag' => DataContainer::SORT_INITIAL_LETTER_ASC,
-			'panelLayout' => 'filter;sort,search,limit',
+			//  'panelLayout' => 'filter;sort,search,limit',
 		),
 		'label' => array(
 			'fields' => array('title'),
