@@ -44,5 +44,5 @@
     },
     "extra": {
         "contao-manager-plugin": "Delirius\\ContaoBackendNotes\\ContaoManager\\Plugin"
-    },
+    }
 }
