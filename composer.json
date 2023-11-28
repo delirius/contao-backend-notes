@@ -1,0 +1,49 @@
+{
+    "name": "delirius/contao-backend-notes",
+    "description": "Ermöglicht es im Backend Notizen zu erfassen. Optional können diese auf dem Dashboard der Contao-Startseite publiziert werden. Damit ist es möglich einem Backend Benutzer Informationen wie Farbdefinitionen, Bildgrössen, Kurzanleitungen oä. zu zeigen.",
+    "keywords": [
+        "contao",
+        "bundle",
+        "notizen",
+        "notes",
+        "backend",
+        "dashboard"
+    ],
+    "type": "contao-bundle",
+    "license": "GPL-3.0-or-later",
+    "authors": [
+        {
+            "name": "Daniel Herren",
+            "email": "contao@delirius.ch",
+            "homepage": "https://delirius.ch",
+            "role": "Developer"
+        }
+    ],
+    "support": {
+        "issues": "https://github.com/delirius/contao-backend-notes/issues",
+        "source": "https://github.com/delirius/contao-backend-notes"
+    },
+    "require": {
+        "php": "^8.1",
+        "contao/core-bundle": "^4.13 || ^5.0"
+    },
+    "require-dev": {
+        "contao/manager-plugin": "^2.12"
+    },
+    "autoload": {
+        "psr-4": {
+            "Delirius\\ContaoBackendNotes\\": "src/"
+        }
+    },
+    "config": {
+        "allow-plugins": {
+            "contao-components/installer": false,
+            "contao/manager-plugin": false,
+            "contao-community-alliance/composer-plugin": true
+        }
+    },
+    "extra": {
+        "contao-manager-plugin": "Delirius\\ContaoBackendNotes\\ContaoManager\\Plugin"
+    },
+    "version": "dev-main"
+}
