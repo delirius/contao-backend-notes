@@ -5,6 +5,7 @@ namespace Delirius\ContaoBackendNotes\EventListener;
 
 use Contao\CoreBundle\DependencyInjection\Attribute\AsHook;
 use Contao\StringUtil;
+use Contao\System;
 
 #[AsHook('getSystemMessages')]
 class GetSystemMessagesListener {
@@ -49,7 +50,9 @@ class GetSystemMessagesListener {
 				foreach ($arrImages as $img) {
 					$objFile = \Contao\FilesModel::findByUuid($img);
 
-					if ($objFile !== \null  && \file_exists(\TL_ROOT  . '/' . $objFile->path)) {
+					$rootDir = System::getContainer()->getParameter('kernel.project_dir');
+
+					if ($objFile !== \null  && \file_exists($rootDir . '/' . $objFile->path)) {
 						if ($r['imagelink']) {
 							$strimages .= '<a href="' . $objFile->path . '" target="_blank" style="border:1px solid #3366cc">';
 						}
