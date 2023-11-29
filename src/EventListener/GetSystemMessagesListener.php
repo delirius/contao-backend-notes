@@ -41,7 +41,7 @@ class GetSystemMessagesListener {
 		$out .= '<strong style="font-size:1rem;margin-bottom:0.6rem;display:block;">' . $r['title'] . '</strong>';
 		if ($r['addImage']) {
 
-			$arrImages = StringUtil::deserialize($r['orderSRC']);
+			$arrImages = StringUtil::deserialize($r['multiSRC']);
 
 			if (isset($arrImages)) {
 				$strimages = '';

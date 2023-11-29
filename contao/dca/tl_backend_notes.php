@@ -13,6 +13,7 @@ declare (strict_types = 1);
  */
 
 use Contao\Backend;
+use Contao\BackendUser;
 use Contao\CoreBundle\Security\ContaoCorePermissions;
 use Contao\DataContainer;
 use Contao\DC_Table;
@@ -129,15 +130,9 @@ $GLOBALS['TL_DCA']['tl_backend_notes'] = array(
 		'multiSRC' => array
 		(
 			'inputType' => 'fileTree',
-			'eval' => array('multiple' => true, 'fieldType' => 'checkbox', 'orderField' => 'orderSRC', 'isGallery' => true, 'isSortable' => true, 'extensions' => '%contao.image.valid_extensions%', 'files' => true, 'tl_class' => 'clr'),
+			'eval' => array('multiple' => true, 'fieldType' => 'checkbox', 'isGallery' => true, 'isSortable' => true, 'extensions' => '%contao.image.valid_extensions%', 'files' => true, 'tl_class' => 'clr'),
 			'sql' => "blob NULL",
 		),
-		'orderSRC' => array
-		(
-			'label' => &$GLOBALS['TL_LANG']['MSC']['sortOrder'],
-			'sql' => "blob NULL",
-		),
-
 		'size' => array
 		(
 			'label' => &$GLOBALS['TL_LANG']['MSC']['imgSize'],
