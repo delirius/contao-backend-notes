@@ -10,11 +10,12 @@ PHP:  ^8.1<br>
 
 ## Screenshots
 
+### Dashboard
+![Alt text](docs/dashboard.png?raw=true "Dashboard")
+
 ### Navigation
 ![Alt text](docs/notes-navigation.png?raw=true "Navigation backend notes")
 
 ### Eingabemaske
 ![Alt text](docs/notes-erfassen.png?raw=true "Backend notes edit")
 
-### Dashboard
-![Alt text](docs/dashboard.png?raw=true "Dashboard")
