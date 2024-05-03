@@ -3,7 +3,6 @@
 //namespace App\EventListener;
 namespace Delirius\ContaoBackendNotes\EventListener;
 
-use Contao\Controller;
 use Contao\CoreBundle\DependencyInjection\Attribute\AsHook;
 use Contao\StringUtil;
 use Contao\System;
@@ -76,7 +75,7 @@ class GetSystemMessagesListener {
 
 		}
 		$out .= '<p>';
-		$out .= Controller::replaceInsertTags($r['textarea']);
+		$out .= $r['textarea'];
 		$out .= '</p>';
 		$out .= '</div>';
 
