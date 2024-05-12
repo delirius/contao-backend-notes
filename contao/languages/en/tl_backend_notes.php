@@ -39,4 +39,5 @@ $GLOBALS['TL_LANG']['tl_backend_notes']['addImage'] = ["Add images", ""];
 $GLOBALS['TL_LANG']['tl_backend_notes']['multiSRC'] = ["Images", ""];
 $GLOBALS['TL_LANG']['tl_backend_notes']['imagelink'] = ["Full-size view/new window", ""];
 $GLOBALS['TL_LANG']['tl_backend_notes']['bgcolor'] = ["Background colour", ""];
+$GLOBALS['TL_LANG']['tl_backend_notes']['bgcolordark'] = ["Background colour darkmode", ""];
 $GLOBALS['TL_LANG']['tl_backend_notes']['published'] = ["Published on the dashboard of the Contao start page", ""];
