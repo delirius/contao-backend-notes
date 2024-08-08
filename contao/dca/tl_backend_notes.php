@@ -89,7 +89,7 @@ $GLOBALS['TL_DCA']['tl_backend_notes'] = array(
 		'default' => '{first_legend},title,textarea;{image_legend},addImage;bgcolor,bgcolordark,published',
 	),
 	'subpalettes' => array(
-		'addImage' => 'multiSRC,size,imagelink',
+		'addImage' => 'multiSRC,size,imagelink,imageaftertext',
 	),
 	'fields' => array(
 		'id' => array(
@@ -151,19 +151,26 @@ $GLOBALS['TL_DCA']['tl_backend_notes'] = array(
 			'eval' => array('tl_class' => 'w50 cbx m12'),
 			'sql' => "char(1) NOT NULL default ''",
 		),
+		'imageaftertext' => array
+		(
+			'toggle' => true,
+			'inputType' => 'checkbox',
+			'eval' => array('tl_class' => 'w50 cbx m12'),
+			'sql' => "char(1) NOT NULL default ''",
+		),
 		'bgcolor' => array(
 			'sorting' => true,
 			'inputType' => 'text',
 			'default' => 'fffbd9',
-			'eval' => array('maxlength' => 6, 'colorpicker' => true, 'isHexColor' => true, 'decodeEntities' => true, 'tl_class' => 'clr w50 wizard'),
+			'eval' => array('maxlength' => 6, 'colorpicker' => true, 'isHexColor' => true, 'decodeEntities' => true, 'placeholder' => 'fffbd9', 'tl_class' => 'clr w50 wizard'),
 			'sql' => "varchar(6) NOT NULL default ''",
 
 		),
 		'bgcolordark' => array(
 			'sorting' => true,
 			'inputType' => 'text',
-			'default' => 'fffbd9',
-			'eval' => array('maxlength' => 6, 'colorpicker' => true, 'isHexColor' => true, 'decodeEntities' => true, 'tl_class' => 'clr w50 wizard'),
+			'default' => '33322b',
+			'eval' => array('maxlength' => 6, 'colorpicker' => true, 'isHexColor' => true, 'decodeEntities' => true, 'placeholder' => '33322b', 'tl_class' => 'clr w50 wizard'),
 			'sql' => "varchar(6) NOT NULL default ''",
 
 		),

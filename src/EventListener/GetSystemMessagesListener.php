@@ -37,17 +37,18 @@ class GetSystemMessagesListener {
 
 	public function output($r): string {
 		$bgcolor = ($r['bgcolor'] ? $r['bgcolor'] : 'fffbd9');
-		$bgcolorDark = ($r['bgcolordark'] ? $r['bgcolordark'] : '332e00');
+		$bgcolorDark = ($r['bgcolordark'] ? $r['bgcolordark'] : '33322b');
 
 		$out = '<style scoped>.notes-backgroundcolor-' . $r['id'] . '{background-color:#' . $bgcolor . ';padding:0.6rem 0.65rem;margin-bottom:1rem;line-height:1.35;} html[data-color-scheme=dark] .notes-backgroundcolor-' . $r['id'] . '{background-color:#' . $bgcolorDark . ';}</style>';
 		$out .= '<div class="notes-backgroundcolor-' . $r['id'] . '">';
 		$out .= '<strong style="font-size:1rem;margin-bottom:0.6rem;display:block;">' . $r['title'] . '</strong>';
+
+		$strimages = '';
 		if ($r['addImage']) {
 
 			$arrImages = StringUtil::deserialize($r['multiSRC']);
 
 			if (isset($arrImages)) {
-				$strimages = '';
 				$strimages .= '<div style="display:flex; flex-wrap:wrap; align-items: flex-start; gap:0.6rem">';
 				foreach ($arrImages as $img) {
 					$objFile = \Contao\FilesModel::findByUuid($img);
@@ -71,14 +72,18 @@ class GetSystemMessagesListener {
 				}
 				$strimages .= '</div>';
 
-				$out .= $strimages;
-
 			}
 
+		}
+		if ( ! $r['imageaftertext']) {
+			$out .= $strimages;
 		}
 		$out .= '<p>';
 		$out .= $r['textarea'];
 		$out .= '</p>';
+		if ($r['imageaftertext']) {
+			$out .= $strimages;
+		}
 		$out .= '</div>';
 
 		return $out;

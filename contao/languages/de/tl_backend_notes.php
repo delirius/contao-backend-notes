@@ -38,6 +38,7 @@ $GLOBALS['TL_LANG']['tl_backend_notes']['textarea'] = ["Text", ""];
 $GLOBALS['TL_LANG']['tl_backend_notes']['addImage'] = ["Bilder hinzufügen", ""];
 $GLOBALS['TL_LANG']['tl_backend_notes']['multiSRC'] = ["Bilder", ""];
 $GLOBALS['TL_LANG']['tl_backend_notes']['imagelink'] = ["Grossansicht/Neues Fenster", ""];
+$GLOBALS['TL_LANG']['tl_backend_notes']['imageaftertext'] = ["Bildausrichtung unterhalb Text", ""];
 $GLOBALS['TL_LANG']['tl_backend_notes']['bgcolor'] = ["Hintergrundfarbe", ""];
 $GLOBALS['TL_LANG']['tl_backend_notes']['bgcolordark'] = ["Hintergrundfarbe Darkmode", ""];
 $GLOBALS['TL_LANG']['tl_backend_notes']['published'] = ["Publiziert auf dem Dashbord der Contao-Startseite", ""];
